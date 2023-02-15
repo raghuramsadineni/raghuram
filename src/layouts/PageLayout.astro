@@ -1,4 +1,6 @@
 ---
+import Header from "../components/Header.astro";
+import SplitPane from "../components/SplitPane.astro";
 import DocumentLayout from "./DocumentLayout.astro";
 
 export interface Props {
@@ -9,5 +11,7 @@ const { title } = Astro.props as Props;
 ---
 
 <DocumentLayout title={title}>
+    <Header />
+    <SplitPane />
     <slot />
 </DocumentLayout>

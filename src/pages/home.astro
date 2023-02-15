@@ -1,7 +1,24 @@
 ---
+import Page from "../components/Page.astro";
 import PageLayout from "../layouts/PageLayout.astro";
 ---
 
-<PageLayout title="">
-	<h1>dvvdsvd</h1>
+<PageLayout title=''>
+	<Page title="page1" />
+	<Page title="page2" />
+	<Page title="page3" />
+	<Page title="page4" />
 </PageLayout>
+
+<script>
+	function toggleLight() {
+		localStorage.theme = 'light'
+	}
+
+	function toggleDark() {
+		localStorage.theme = 'dark'
+	}
+
+	document.getElementById('light')?.addEventListener('click', toggleLight);
+	document.getElementById('dark')?.addEventListener('click', toggleDark);
+</script>

@@ -1,0 +1,127 @@
+---
+type INavMenu = {
+    title: string;
+    link: string;
+};
+
+const navMenus: INavMenu[] = [
+    {
+        title: "Intro",
+        link: "#intro",
+    },
+    {
+        title: "Page 2",
+        link: "#page2",
+    },
+    {
+        title: "Page 3",
+        link: "#page3",
+    },
+    {
+        title: "Page 4",
+        link: "#page4",
+    },
+];
+---
+
+<script>
+    document.addEventListener("scroll", (e: Event) => {
+        let i = 0;
+        let sectionElements: HTMLCollectionOf<HTMLElement> =
+            document.getElementsByTagName("section");
+
+        // Get the section which is currently active on viewpoint
+        while (i < sectionElements.length) {
+            let section = sectionElements[i];
+            if (section.getBoundingClientRect().top >= 0) {
+                break;
+            }
+            i++;
+        }
+
+        // Updating hashroute to particular section id
+        if (
+            sectionElements[i] &&
+            window.location.hash != "#" + sectionElements[i].id
+        ) {
+            history.replaceState(null, "", "#" + sectionElements[i].id);
+
+            // Updating all nav bars to highlight current section
+            let navLinks: HTMLCollectionOf<HTMLAnchorElement> =
+                document.getElementsByTagName("a");
+            for (let i = 0; i < navLinks.length; i++) {
+                if (navLinks[i].hash == window.location.hash) {
+                    navLinks[i].classList.add("text-blue-500");
+                    navLinks[i].classList.add("dark:text-white");
+
+                    let svgIcons = navLinks[i].getElementsByTagName("svg");
+                    for (let j = 0; j < svgIcons.length; j++) {
+                        svgIcons[j].classList.add("text-blue-500");
+                        svgIcons[j].classList.add("dark:text-white");
+                    }
+                } else {
+                    navLinks[i].classList.remove("text-blue-500");
+                    navLinks[i].classList.remove("dark:text-white");
+
+                    let svgIcons = navLinks[i].getElementsByTagName("svg");
+                    for (let j = 0; j < svgIcons.length; j++) {
+                        svgIcons[j].classList.remove("text-blue-500");
+                        svgIcons[j].classList.remove("dark:text-white");
+                    }
+                }
+            }
+        }
+    });
+</script>
+
+<aside
+    id="splitpane"
+    class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-500"
+>
+    <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
+        <ul class="space-y-2">
+            {
+                navMenus.map((navMenu: INavMenu) => (
+                    <li>
+                        <a
+                            href={navMenu.link}
+                            class="group py-2 transition-colors duration-200 relative justify-between flex items-center flex-wrap text-gray-500 dark:text-gray-400"
+                        >
+                            <div class="flex items-center">
+                                <svg
+                                    aria-hidden="true"
+                                    class="w-8 h-8 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-blue-500 dark:group-hover:text-white"
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <>
+                                        <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z" />
+                                        <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z" />
+                                    </>
+                                </svg>
+                                <span class="ml-4 text-lg group-hover:text-blue-500 dark:group-hover:text-white">
+                                    {navMenu.title}
+                                </span>
+                            </div>
+
+                            <svg
+                                class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-blue-500 dark:group-hover:text-white"
+                                fill="currentColor"
+                                viewBox="0 0 22 22"
+                                xmlns="http://www.w3.org/2000/svg"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    clip-rule="evenodd"
+                                    fill-rule="evenodd"
+                                    d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z"
+                                />
+                            </svg>
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
+</aside>
