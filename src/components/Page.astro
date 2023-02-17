@@ -1,86 +1,71 @@
 ---
+import { Image } from "@astrojs/image/components";
+import raghuram from "../../public/raghuram.png";
 export interface Props {
    title: string;
 }
 
-const { title = "page1" } = Astro.props as Props;
+const { title } = Astro.props as Props;
 ---
 
-<section class="p-4 sm:ml-64" id={title}>
-   <div
-      class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14"
-   >
-      <h1>{title}</h1>
-      <div class="grid grid-cols-3 gap-4 mb-4">
-         <div
-            class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800"
-         >
-            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+<section class="sm:p-4 sm:ml-64 h-screen" id={title}>
+   <div class="sm:p-4 mt-14 h-full flex flex-col md:flex-row">
+      <div class="p-8 h-1/2 flex flex-col justify-center md:w-1/2 md:h-screen">
+         <div class="flex flex-col sm:flex-row">
+            <p class="text-2xl whitespace-nowrap text-gray-900 dark:text-white">
+               Hi I'm
+            </p>
+            <p
+               class="typed-out overflow-hidden border-r-2 border-black whitespace-nowrap text-2xl w-0 sm:ml-1 text-gray-900 dark:text-white"
+            >
+               Raghuram Sadineni
+            </p>
          </div>
-         <div
-            class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800"
-         >
-            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-         </div>
-         <div
-            class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800"
-         >
-            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-         </div>
-      </div>
-      <div
-         class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800"
-      >
-         <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-      </div>
-      <div class="grid grid-cols-2 gap-4 mb-4">
-         <div
-            class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800"
-         >
-            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-         </div>
-         <div
-            class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800"
-         >
-            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-         </div>
-         <div
-            class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800"
-         >
-            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-         </div>
-         <div
-            class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800"
-         >
-            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+         <div class="flex">
+            <p class="text-2xl text-gray-900 dark:text-white">
+               I am Currently pursuing Master's in Computer Science at
+               <a
+                  href="#"
+                  class="inline-flex items-center justify-center text-base font-medium p-2 text-gray-600 rounded-lg bg-gray-50 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white"
+               >
+                  <span class="w-full text-2xl">LSU</span>
+               </a>
+            </p>
          </div>
       </div>
-      <div
-         class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800"
-      >
-         <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-      </div>
-      <div class="grid grid-cols-2 gap-4">
-         <div
-            class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800"
-         >
-            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-         </div>
-         <div
-            class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800"
-         >
-            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-         </div>
-         <div
-            class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800"
-         >
-            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-         </div>
-         <div
-            class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800"
-         >
-            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
-         </div>
+      <div class="h-1/2 flex justify-center items-center bg-[url('/background.svg')] bg-no-repeat bg-center md:w-1/2 md:h-screen">
+         <Image
+            src={raghuram}
+            width={256}
+            height={218}
+            alt="Raghuram Sadineni"
+            class="object-contain h-fit rounded-full"
+         />
       </div>
    </div>
 </section>
+
+<style>
+   .typed-out {
+      animation: typing 8s steps(24, end) infinite, blink 1s infinite;
+   }
+   @keyframes typing {
+      from {
+         width: 0%;
+      }
+      50% {
+         width: calc(204px);
+      }
+      to {
+         width: 0%;
+      }
+   }
+   @keyframes blink {
+      from {
+         border-color: transparent;
+      }
+      to {
+         border-color: black;
+      }
+   }
+</style>
