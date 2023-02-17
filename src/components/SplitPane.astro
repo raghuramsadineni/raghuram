@@ -1,29 +1,3 @@
----
-type INavMenu = {
-    title: string;
-    link: string;
-};
-
-const navMenus: INavMenu[] = [
-    {
-        title: "Intro",
-        link: "#intro",
-    },
-    {
-        title: "Page 2",
-        link: "#page2",
-    },
-    {
-        title: "Page 3",
-        link: "#page3",
-    },
-    {
-        title: "Page 4",
-        link: "#page4",
-    },
-];
----
-
 <script>
     document.addEventListener("scroll", (e: Event) => {
         let i = 0;
@@ -55,18 +29,18 @@ const navMenus: INavMenu[] = [
                     navLinks[i].classList.add("dark:text-white");
 
                     let svgIcons = navLinks[i].getElementsByTagName("svg");
-                    for (let j = 0; j < svgIcons.length; j++) {
-                        svgIcons[j].classList.add("text-rose-900");
-                        svgIcons[j].classList.add("dark:text-white");
+                    for (let i = 0; i < svgIcons.length; i++) {
+                        svgIcons[i].classList.add("text-rose-900");
+                        svgIcons[i].classList.add("dark:text-white");
                     }
                 } else {
                     navLinks[i].classList.remove("text-rose-900");
                     navLinks[i].classList.remove("dark:text-white");
 
                     let svgIcons = navLinks[i].getElementsByTagName("svg");
-                    for (let j = 0; j < svgIcons.length; j++) {
-                        svgIcons[j].classList.remove("text-rose-900");
-                        svgIcons[j].classList.remove("dark:text-white");
+                    for (let i = 0; i < svgIcons.length; i++) {
+                        svgIcons[i].classList.remove("text-rose-900");
+                        svgIcons[i].classList.remove("dark:text-white");
                     }
                 }
             }
@@ -76,52 +50,178 @@ const navMenus: INavMenu[] = [
 
 <aside
     id="splitpane"
-    class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-500"
+    class="fixed top-0 left-0 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-500"
 >
     <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
         <ul class="space-y-2">
-            {
-                navMenus.map((navMenu: INavMenu) => (
-                    <li>
-                        <a
-                            href={navMenu.link}
-                            class="group py-2 transition-colors duration-200 relative justify-between flex items-center flex-wrap text-gray-500 dark:text-gray-400"
+            <li>
+                <a
+                    href="#intro"
+                    class="group py-2 transition-colors duration-200 relative justify-between flex items-center flex-wrap text-gray-500 dark:text-gray-400"
+                >
+                    <div class="flex items-center">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="{1.5}"
+                            stroke="currentColor"
+                            class="w-6 h-6 group-hover:text-rose-900 dark:group-hover:text-white"
                         >
-                            <div class="flex items-center">
-                                <svg
-                                    aria-hidden="true"
-                                    class="w-8 h-8 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-rose-900 dark:group-hover:text-white"
-                                    fill="currentColor"
-                                    viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <>
-                                        <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z" />
-                                        <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z" />
-                                    </>
-                                </svg>
-                                <span class="ml-4 text-lg group-hover:text-rose-900 dark:group-hover:text-white">
-                                    {navMenu.title}
-                                </span>
-                            </div>
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                            ></path>
+                        </svg>
+                        <span
+                            class="ml-4 text-lg group-hover:text-rose-900 dark:group-hover:text-white"
+                        >
+                            Intro
+                        </span>
+                    </div>
 
-                            <svg
-                                class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-rose-900 dark:group-hover:text-white"
-                                fill="currentColor"
-                                viewBox="0 0 22 22"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true"
-                            >
-                                <path
-                                    clip-rule="evenodd"
-                                    fill-rule="evenodd"
-                                    d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z"
-                                />
-                            </svg>
-                        </a>
-                    </li>
-                ))
-            }
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6 group-hover:text-rose-900 dark:group-hover:text-white"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a
+                    href="#page1"
+                    class="group py-2 transition-colors duration-200 relative justify-between flex items-center flex-wrap text-gray-500 dark:text-gray-400"
+                >
+                    <div class="flex items-center">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="{1.5}"
+                            stroke="currentColor"
+                            class="w-6 h-6 group-hover:text-rose-900 dark:group-hover:text-white"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                            ></path>
+                        </svg>
+                        <span
+                            class="ml-4 text-lg group-hover:text-rose-900 dark:group-hover:text-white"
+                        >
+                            Page 1
+                        </span>
+                    </div>
+
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6 group-hover:text-rose-900 dark:group-hover:text-white"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a
+                    href="#page2"
+                    class="group py-2 transition-colors duration-200 relative justify-between flex items-center flex-wrap text-gray-500 dark:text-gray-400"
+                >
+                    <div class="flex items-center">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="{1.5}"
+                            stroke="currentColor"
+                            class="w-6 h-6 group-hover:text-rose-900 dark:group-hover:text-white"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                            ></path>
+                        </svg>
+                        <span
+                            class="ml-4 text-lg group-hover:text-rose-900 dark:group-hover:text-white"
+                        >
+                            Page 2
+                        </span>
+                    </div>
+
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6 group-hover:text-rose-900 dark:group-hover:text-white"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a
+                    href="#page3"
+                    class="group py-2 transition-colors duration-200 relative justify-between flex items-center flex-wrap text-gray-500 dark:text-gray-400"
+                >
+                    <div class="flex items-center">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="{1.5}"
+                            stroke="currentColor"
+                            class="w-6 h-6 group-hover:text-rose-900 dark:group-hover:text-white"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                            ></path>
+                        </svg>
+                        <span
+                            class="ml-4 text-lg group-hover:text-rose-900 dark:group-hover:text-white"
+                        >
+                            Page 3
+                        </span>
+                    </div>
+
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6 group-hover:text-rose-900 dark:group-hover:text-white"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+                    </svg>
+                </a>
+            </li>
         </ul>
     </div>
 </aside>
