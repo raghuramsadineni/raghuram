@@ -1,0 +1,137 @@
+---
+import raghuram from "../../public/background.svg";
+export interface Props {
+   title: string;
+}
+
+const { title } = Astro.props as Props;
+---
+
+<section
+   class="sm:ml-64 py-8 px-4 max-w-screen-xl lg:py-16 lg:px-12 m-4"
+   id={title}
+>
+   <h5 class="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
+      Projects
+   </h5>
+   <div class="flex flex-wrap">
+      <div
+         class="card m-4 max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      >
+         <a href="https://www.bahmni.org/">
+            <img
+               class="rounded-t-lg w-full h-80 object-contain"
+               src="/bahmni.png"
+               alt=""
+            />
+         </a>
+         <div class="p-5">
+            <a href="https://www.bahmni.org/">
+               <h5
+                  class="mb-2 text-2xl font-bold tracking-tight text-rose-900 dark:text-white"
+               >
+                  Distributed Health Care Management System
+               </h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+               Successfully deployed the Bhamni open-source healthcare
+               management system in a public hospital, optimizing operations
+               through implementation of face recognition technology for
+               efficient patient record retrieval in OpenMRS.
+            </p>
+         </div>
+      </div>
+
+      <div
+         class="card m-4 max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      >
+         <a href="https://raghuram-sadineni.github.io/ShiftReduceParser/">
+            <img
+               class="rounded-t-lg w-full h-80 object-contain"
+               src="/shiftreduceparser.png"
+               alt=""
+            />
+         </a>
+         <div class="p-5">
+            <a href="https://raghuram-sadineni.github.io/ShiftReduceParser/">
+               <h5
+                  class="mb-2 text-2xl font-bold tracking-tight text-rose-900 dark:text-white"
+               >
+                  Shift Reduce Parser
+               </h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+               I developed a web app that implements a shift-reduce parser using
+               TypeScript. It can parse a string based on a pre-defined
+               context-free grammar and displays the final goal state. The app
+               is user-friendly and suitable for anyone interested in using
+               shift-reduce parser.
+            </p>
+         </div>
+      </div>
+
+      <div
+         class="card m-4 max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      >
+         <a href="https://github.com/RAGHURAM-SADINENI/Text-Book-Recommendor">
+            <img
+               class="rounded-t-lg w-full h-80 object-contain"
+               src="/textbook.avif"
+               alt=""
+            />
+         </a>
+         <div class="p-5">
+            <a
+               href="https://github.com/RAGHURAM-SADINENI/Text-Book-Recommendor"
+            >
+               <h5
+                  class="mb-2 text-2xl font-bold tracking-tight text-rose-900 dark:text-white"
+               >
+                  Text-Book-Recommendor
+               </h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+               Implemented an expert system to identify textbook names for a
+               given topic by using automated software to search the internet
+               and gather relevant information, which is then presented in a
+               desktop application.
+            </p>
+         </div>
+      </div>
+
+      <div
+         class="card m-4 max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      >
+         <a href="https://github.com/RAGHURAM-SADINENI/Text-Book-Recommendor">
+            <img
+               class="rounded-t-lg w-full h-80 object-contain"
+               src="/classificationalgorithms.avif"
+               alt=""
+            />
+         </a>
+         <div class="p-5">
+            <a
+               href="https://github.com/RAGHURAM-SADINENI/Text-Book-Recommendor"
+            >
+               <h5
+                  class="mb-2 text-2xl font-bold tracking-tight text-rose-900 dark:text-white"
+               >
+                  Classification Algorithms
+               </h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+               Implemented various machine learning algorithms including KNN,
+               Decision Tree, Random Forests, SVM, and ANN on Iris and
+               Breast-Cancer-Wisconsin datasets, demonstrating proficiency in
+               machine learning techniques and data analysis.
+            </p>
+         </div>
+      </div>
+   </div>
+</section>
+
+<style>
+   .card {
+      min-width: 320px;
+   }
+</style>

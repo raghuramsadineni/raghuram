@@ -1,356 +1,361 @@
 ---
 export interface Props {
-   title: string;
+    title: string;
 }
 
 const { title } = Astro.props as Props;
 ---
 
 <section
-   class="sm:ml-64 py-8 px-4 max-w-screen-xl lg:pb-8 lg:px-12 m-4"
-   id={title}
+    class="sm:ml-64 py-8 px-4 max-w-screen-xl lg:pb-8 lg:px-12 m-4"
+    id={title}
 >
-   <h5 class="mb-2 text-2xl font-bold text-gray-900 dark:text-white">
-      Work Experience
-   </h5>
-   <ol class="relative border-l border-gray-300 dark:border-gray-700 sm:mx-4">
-      <li class="mb-10 ml-8">
-         <span
-            class="absolute flex items-center justify-center w-8 h-8 bg-rose-100 rounded-full -left-4 ring-8 ring-white dark:ring-gray-900 dark:bg-rose-900"
-         >
-            <svg
-               aria-hidden="true"
-               class="w-5 h-5 text-rose-800 dark:text-rose-300"
-               fill="currentColor"
-               viewBox="0 0 20 20"
-               xmlns="http://www.w3.org/2000/svg"
-               ><path
-                  fill-rule="evenodd"
-                  d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                  clip-rule="evenodd"></path></svg
+    <h5 class="mb-2 text-2xl font-bold text-gray-900 dark:text-white">
+        Work Experience
+    </h5>
+    <ol class="relative border-l border-gray-300 dark:border-gray-700 sm:mx-4">
+        <li class="mb-10 ml-8">
+            <span
+                class="absolute flex items-center justify-center w-8 h-8 bg-rose-100 rounded-full -left-4 ring-8 ring-white dark:ring-gray-900 dark:bg-rose-900"
             >
-         </span>
-         <div
-            class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600"
-         >
-            <div class="flex justify-between">
-               <div>
-                  <h3
-                     class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white"
-                  >
-                     Graduate Research Assistant
-                  </h3>
-                  <h5 class="italic text-gray-900 dark:text-white">
-                     LSU Department of Physics and Astronomy
-                  </h5>
-               </div>
-               <div class="flex flex-col items-end">
-                  <h3
-                     class="flex items-center mb-1 text-lg text-gray-900 dark:text-white"
-                  >
-                     Jan. 2022 – Present
-                  </h3>
-                  <h5 class="italic text-gray-900 dark:text-white">
-                     Baton Rouge, LA
-                  </h5>
-               </div>
+                <svg
+                    aria-hidden="true"
+                    class="w-5 h-5 text-rose-800 dark:text-rose-300"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    ><path
+                        fill-rule="evenodd"
+                        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                        clip-rule="evenodd"></path></svg
+                >
+            </span>
+            <div
+                class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600"
+            >
+                <div class="flex justify-between">
+                    <div>
+                        <h3
+                            class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white"
+                        >
+                            Graduate Research Assistant
+                        </h3>
+                        <h5 class="italic text-gray-900 dark:text-white">
+                            LSU Department of Physics and Astronomy
+                        </h5>
+                    </div>
+                    <div class="flex flex-col items-end">
+                        <h3
+                            class="flex items-center mb-1 text-lg text-gray-900 dark:text-white"
+                        >
+                            Jan. 2022 – Present
+                        </h3>
+                        <h5 class="italic text-gray-900 dark:text-white">
+                            Baton Rouge, LA
+                        </h5>
+                    </div>
+                </div>
+                <ul
+                    class="space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
+                >
+                    <li>
+                        Designed and developed new features for ”BRBytes”, a
+                        comprehensive course management platform for high school
+                        students in Baton Rouge.
+                    </li>
+                    <li>
+                        Created a file submission service to allow students to
+                        submit daily assignments efficiently.
+                    </li>
+                    <li>
+                        Built an autograder system to automate grading process
+                        for hundreds of exercises and activities in ”BRBytes”.
+                    </li>
+                    <li>
+                        Developed reusable HTML templates for quick construction
+                        of new web pages for lessons and activities.
+                    </li>
+                </ul>
             </div>
-            <ul
-               class="space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
+        </li>
+        <li class="ml-8">
+            <span
+                class="absolute flex items-center justify-center w-8 h-8 bg-rose-100 rounded-full -left-4 ring-8 ring-white dark:ring-gray-900 dark:bg-rose-900"
             >
-               <li>
-                  Designed and developed new features for ”BRBytes”, a
-                  comprehensive course management platform for high school
-                  students in Baton Rouge.
-               </li>
-               <li>
-                  Created a file submission service to allow students to submit
-                  daily assignments efficiently.
-               </li>
-               <li>
-                  Built an autograder system to automate grading process for
-                  hundreds of exercises and activities in ”BRBytes”.
-               </li>
-               <li>
-                  Developed reusable HTML templates for quick construction of
-                  new web pages for lessons and activities.
-               </li>
-            </ul>
-         </div>
-      </li>
-      <li class="ml-8">
-         <span
-            class="absolute flex items-center justify-center w-8 h-8 bg-rose-100 rounded-full -left-4 ring-8 ring-white dark:ring-gray-900 dark:bg-rose-900"
-         >
-            <svg
-               aria-hidden="true"
-               class="w-5 h-5 text-rose-800 dark:text-rose-300"
-               fill="currentColor"
-               viewBox="0 0 20 20"
-               xmlns="http://www.w3.org/2000/svg"
-               ><path
-                  fill-rule="evenodd"
-                  d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                  clip-rule="evenodd"></path></svg
+                <svg
+                    aria-hidden="true"
+                    class="w-5 h-5 text-rose-800 dark:text-rose-300"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    ><path
+                        fill-rule="evenodd"
+                        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                        clip-rule="evenodd"></path></svg
+                >
+            </span>
+            <div
+                class="p-4 bg-white border border-gray-200 rounded-t-lg border-b-0 shadow-sm dark:bg-gray-700 dark:border-gray-600"
             >
-         </span>
-         <div
-            class="p-4 bg-white border border-gray-200 rounded-t-lg border-b-0 shadow-sm dark:bg-gray-700 dark:border-gray-600"
-         >
-            <div class="flex justify-between">
-               <div>
-                  <h3
-                     class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white"
-                  >
-                     Full Stack Engineer
-                  </h3>
-                  <h5 class="italic text-gray-900 dark:text-white">QueryNow</h5>
-               </div>
-               <div class="flex flex-col items-end">
-                  <h3
-                     class="flex items-center mb-1 text-lg text-gray-900 dark:text-white"
-                  >
-                     Jun. 2020 – Dec. 2021
-                  </h3>
-                  <h5 class="italic text-gray-900 dark:text-white">
-                     Hyderabad, IND
-                  </h5>
-               </div>
+                <div class="flex justify-between">
+                    <div>
+                        <h3
+                            class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white"
+                        >
+                            Full Stack Engineer
+                        </h3>
+                        <h5 class="italic text-gray-900 dark:text-white">
+                            QueryNow
+                        </h5>
+                    </div>
+                    <div class="flex flex-col items-end">
+                        <h3
+                            class="flex items-center mb-1 text-lg text-gray-900 dark:text-white"
+                        >
+                            Jun. 2020 – Dec. 2021
+                        </h3>
+                        <h5 class="italic text-gray-900 dark:text-white">
+                            Hyderabad, IND
+                        </h5>
+                    </div>
+                </div>
+                <ul
+                    class="space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
+                >
+                    <li>
+                        Developed an Enterprise E-Commerce application that
+                        revolutionized customer shopping experience by
+                        incorporating visual search features using Vision API
+                        and Dynamics 365 Commerce.
+                    </li>
+                    <li>
+                        Created a Single Page Application for restaurants to
+                        efficiently monitor customer data during COVID-19.
+                    </li>
+                    <li>
+                        Built a cross-platform app using Machine Learning to
+                        predict infant weight in the first 18 months.
+                    </li>
+                    <li>
+                        Contributed to the design and development of projects
+                        for clients in the pharmacy, travel, and steel
+                        industries.
+                    </li>
+                </ul>
             </div>
-            <ul
-               class="space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
-            >
-               <li>
-                  Developed an Enterprise E-Commerce application that
-                  revolutionized customer shopping experience by incorporating
-                  visual search features using Vision API and Dynamics 365
-                  Commerce.
-               </li>
-               <li>
-                  Created a Single Page Application for restaurants to
-                  efficiently monitor customer data during COVID-19.
-               </li>
-               <li>
-                  Built a cross-platform app using Machine Learning to predict
-                  infant weight in the first 18 months.
-               </li>
-               <li>
-                  Contributed to the design and development of projects for
-                  clients in the pharmacy, travel, and steel industries.
-               </li>
-            </ul>
-         </div>
-      </li>
+        </li>
 
-      <li class="mb-10 ml-8">
-         <div
-            class="p-4 bg-white border border-gray-200 border-t-0 rounded-b-lg shadow-sm dark:bg-gray-700 dark:border-gray-600"
-         >
-            <div class="flex justify-between">
-               <div>
-                  <h3
-                     class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white"
-                  >
-                     Intern
-                  </h3>
-                  <h5 class="italic text-gray-900 dark:text-white">QueryNow</h5>
-               </div>
-               <div class="flex flex-col items-end">
-                  <h3
-                     class="flex items-center mb-1 text-lg text-gray-900 dark:text-white"
-                  >
-                     Jul. 2019 – Jun. 2020
-                  </h3>
-                  <h5 class="italic text-gray-900 dark:text-white">
-                     Hyderabad, IND
-                  </h5>
-               </div>
-            </div>
-            <ul
-               class="space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
+        <li class="mb-10 ml-8">
+            <div
+                class="p-4 bg-white border border-gray-200 border-t-0 rounded-b-lg shadow-sm dark:bg-gray-700 dark:border-gray-600"
             >
-               <li>
-                  Implemented User Authentication, Enterprise Search module, and
-                  News Recommendation System in the enterprise digital workspace
-                  product Exalt.
-               </li>
-               <li>
-                  Performed migration of Exalt’s front-end code from Angular 7
-                  to Angular 12.
-               </li>
-            </ul>
-         </div>
-      </li>
+                <div class="flex justify-between">
+                    <div>
+                        <h3
+                            class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white"
+                        >
+                            Intern
+                        </h3>
+                        <h5 class="italic text-gray-900 dark:text-white">
+                            QueryNow
+                        </h5>
+                    </div>
+                    <div class="flex flex-col items-end">
+                        <h3
+                            class="flex items-center mb-1 text-lg text-gray-900 dark:text-white"
+                        >
+                            Jul. 2019 – Jun. 2020
+                        </h3>
+                        <h5 class="italic text-gray-900 dark:text-white">
+                            Hyderabad, IND
+                        </h5>
+                    </div>
+                </div>
+                <ul
+                    class="space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
+                >
+                    <li>
+                        Implemented User Authentication, Enterprise Search
+                        module, and News Recommendation System in the enterprise
+                        digital workspace product Exalt.
+                    </li>
+                    <li>
+                        Performed migration of Exalt’s front-end code from
+                        Angular 7 to Angular 12.
+                    </li>
+                </ul>
+            </div>
+        </li>
 
-      <li class="mb-10 ml-8">
-         <span
-            class="absolute flex items-center justify-center w-8 h-8 bg-rose-100 rounded-full -left-4 ring-8 ring-white dark:ring-gray-900 dark:bg-rose-900"
-         >
-            <svg
-               aria-hidden="true"
-               class="w-5 h-5 text-rose-800 dark:text-rose-300"
-               fill="currentColor"
-               viewBox="0 0 20 20"
-               xmlns="http://www.w3.org/2000/svg"
-               ><path
-                  fill-rule="evenodd"
-                  d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                  clip-rule="evenodd"></path></svg
+        <li class="mb-10 ml-8">
+            <span
+                class="absolute flex items-center justify-center w-8 h-8 bg-rose-100 rounded-full -left-4 ring-8 ring-white dark:ring-gray-900 dark:bg-rose-900"
             >
-         </span>
-         <div
-            class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600"
-         >
-            <div class="flex justify-between">
-               <div>
-                  <h3
-                     class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white"
-                  >
-                     Intern
-                  </h3>
-                  <h5 class="italic text-gray-900 dark:text-white">
-                     Technovert
-                  </h5>
-               </div>
-               <div class="flex flex-col items-end">
-                  <h3
-                     class="flex items-center mb-1 text-lg text-gray-900 dark:text-white"
-                  >
-                     May. 2019 – Jun. 2019
-                  </h3>
-                  <h5 class="italic text-gray-900 dark:text-white">
-                     Hyderabad, IND
-                  </h5>
-               </div>
+                <svg
+                    aria-hidden="true"
+                    class="w-5 h-5 text-rose-800 dark:text-rose-300"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    ><path
+                        fill-rule="evenodd"
+                        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                        clip-rule="evenodd"></path></svg
+                >
+            </span>
+            <div
+                class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600"
+            >
+                <div class="flex justify-between">
+                    <div>
+                        <h3
+                            class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white"
+                        >
+                            Intern
+                        </h3>
+                        <h5 class="italic text-gray-900 dark:text-white">
+                            Technovert
+                        </h5>
+                    </div>
+                    <div class="flex flex-col items-end">
+                        <h3
+                            class="flex items-center mb-1 text-lg text-gray-900 dark:text-white"
+                        >
+                            May. 2019 – Jun. 2019
+                        </h3>
+                        <h5 class="italic text-gray-900 dark:text-white">
+                            Hyderabad, IND
+                        </h5>
+                    </div>
+                </div>
+                <ul
+                    class="space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
+                >
+                    <li>
+                        Developed a user-friendly Single Page Application (SPA)
+                        for secure storage and management of users’ personal
+                        information, with a clean and simple interface for easy
+                        navigation and access to information.
+                    </li>
+                    <li>
+                        Built back-end functionality and managed database
+                        integration using .NET Core web API and Petapoco ORM.
+                    </li>
+                </ul>
             </div>
-            <ul
-               class="space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
-            >
-               <li>
-                  Developed a user-friendly Single Page Application (SPA) for
-                  secure storage and management of users’ personal information,
-                  with a clean and simple interface for easy navigation and
-                  access to information.
-               </li>
-               <li>
-                  Built back-end functionality and managed database integration
-                  using .NET Core web API and Petapoco ORM.
-               </li>
-            </ul>
-         </div>
-      </li>
+        </li>
 
-      <li class="mb-10 ml-8">
-         <span
-            class="absolute flex items-center justify-center w-8 h-8 bg-rose-100 rounded-full -left-4 ring-8 ring-white dark:ring-gray-900 dark:bg-rose-900"
-         >
-            <svg
-               aria-hidden="true"
-               class="w-5 h-5 text-rose-800 dark:text-rose-300"
-               fill="currentColor"
-               viewBox="0 0 20 20"
-               xmlns="http://www.w3.org/2000/svg"
-               ><path
-                  fill-rule="evenodd"
-                  d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                  clip-rule="evenodd"></path></svg
+        <li class="mb-10 ml-8">
+            <span
+                class="absolute flex items-center justify-center w-8 h-8 bg-rose-100 rounded-full -left-4 ring-8 ring-white dark:ring-gray-900 dark:bg-rose-900"
             >
-         </span>
-         <div
-            class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600"
-         >
-            <div class="flex justify-between">
-               <div>
-                  <h3
-                     class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white"
-                  >
-                     Intern
-                  </h3>
-                  <h5 class="italic text-gray-900 dark:text-white">
-                     CloudChip
-                  </h5>
-               </div>
-               <div class="flex flex-col items-end">
-                  <h3
-                     class="flex items-center mb-1 text-lg text-gray-900 dark:text-white"
-                  >
-                     May. 2018 – Jun. 2018
-                  </h3>
-                  <h5 class="italic text-gray-900 dark:text-white">
-                     Hyderabad, IND
-                  </h5>
-               </div>
+                <svg
+                    aria-hidden="true"
+                    class="w-5 h-5 text-rose-800 dark:text-rose-300"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    ><path
+                        fill-rule="evenodd"
+                        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                        clip-rule="evenodd"></path></svg
+                >
+            </span>
+            <div
+                class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600"
+            >
+                <div class="flex justify-between">
+                    <div>
+                        <h3
+                            class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white"
+                        >
+                            Intern
+                        </h3>
+                        <h5 class="italic text-gray-900 dark:text-white">
+                            CloudChip
+                        </h5>
+                    </div>
+                    <div class="flex flex-col items-end">
+                        <h3
+                            class="flex items-center mb-1 text-lg text-gray-900 dark:text-white"
+                        >
+                            May. 2018 – Jun. 2018
+                        </h3>
+                        <h5 class="italic text-gray-900 dark:text-white">
+                            Hyderabad, IND
+                        </h5>
+                    </div>
+                </div>
+                <ul
+                    class="space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
+                >
+                    <li>
+                        Built a Machine Learning model using Neural Network to
+                        help drivers take regular breaks during long drives by
+                        determining their position through accelerometer data.
+                    </li>
+                    <li>
+                        Gained proficiency in Machine Learning Algorithms
+                        including KNN, Decision Trees, SVM, and Neural Networks.
+                    </li>
+                </ul>
             </div>
-            <ul
-               class="space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
+        </li>
+        <li class="mb-10 ml-8">
+            <span
+                class="absolute flex items-center justify-center w-8 h-8 bg-rose-100 rounded-full -left-4 ring-8 ring-white dark:ring-gray-900 dark:bg-rose-900"
             >
-               <li>
-                  Built a Machine Learning model using Neural Network to help
-                  drivers take regular breaks during long drives by determining
-                  their position through accelerometer data.
-               </li>
-               <li>
-                  Gained proficiency in Machine Learning Algorithms including
-                  KNN, Decision Trees, SVM, and Neural Networks.
-               </li>
-            </ul>
-         </div>
-      </li>
-      <li class="mb-10 ml-8">
-         <span
-            class="absolute flex items-center justify-center w-8 h-8 bg-rose-100 rounded-full -left-4 ring-8 ring-white dark:ring-gray-900 dark:bg-rose-900"
-         >
-            <svg
-               aria-hidden="true"
-               class="w-5 h-5 text-rose-800 dark:text-rose-300"
-               fill="currentColor"
-               viewBox="0 0 20 20"
-               xmlns="http://www.w3.org/2000/svg"
-               ><path
-                  fill-rule="evenodd"
-                  d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                  clip-rule="evenodd"></path></svg
+                <svg
+                    aria-hidden="true"
+                    class="w-5 h-5 text-rose-800 dark:text-rose-300"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    ><path
+                        fill-rule="evenodd"
+                        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                        clip-rule="evenodd"></path></svg
+                >
+            </span>
+            <div
+                class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600"
             >
-         </span>
-         <div
-            class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600"
-         >
-            <div class="flex justify-between">
-               <div>
-                  <h3
-                     class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white"
-                  >
-                     Intern
-                  </h3>
-                  <h5 class="italic text-gray-900 dark:text-white">
-                     Swecha.org
-                  </h5>
-               </div>
-               <div class="flex flex-col items-end">
-                  <h3
-                     class="flex items-center mb-1 text-lg text-gray-900 dark:text-white"
-                  >
-                     May. 2017 – Jun. 2017
-                  </h3>
-                  <h5 class="italic text-gray-900 dark:text-white">
-                     Hyderabad, IND
-                  </h5>
-               </div>
+                <div class="flex justify-between">
+                    <div>
+                        <h3
+                            class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white"
+                        >
+                            Intern
+                        </h3>
+                        <h5 class="italic text-gray-900 dark:text-white">
+                            Swecha.org
+                        </h5>
+                    </div>
+                    <div class="flex flex-col items-end">
+                        <h3
+                            class="flex items-center mb-1 text-lg text-gray-900 dark:text-white"
+                        >
+                            May. 2017 – Jun. 2017
+                        </h3>
+                        <h5 class="italic text-gray-900 dark:text-white">
+                            Hyderabad, IND
+                        </h5>
+                    </div>
+                </div>
+                <ul
+                    class="space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
+                >
+                    <li>
+                        Implemented an IoT application to record temperature
+                        using a temperature sensor and transmit the data via a
+                        Node-MCU WiFi module.
+                    </li>
+                    <li>
+                        Utilized Weka to create graphs for easy understanding of
+                        the climatic changes in the given area.
+                    </li>
+                </ul>
             </div>
-            <ul
-               class="space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
-            >
-               <li>
-                  Implemented an IoT application to record temperature using a
-                  temperature sensor and transmit the data via a Node-MCU WiFi
-                  module.
-               </li>
-               <li>
-                  Utilized Weka to create graphs for easy understanding of the
-                  climatic changes in the given area.
-               </li>
-            </ul>
-         </div>
-      </li>
-   </ol>
+        </li>
+    </ol>
 </section>
