@@ -8,28 +8,28 @@ const { title } = Astro.props as Props;
 ---
 
 <section
-   class="sm:ml-64 py-8 px-4 mx-auto max-w-screen-xl text-center lg:px-12"
+   class="sm:ml-64 py-8 px-4 mx-auto  text-center lg:px-12"
    id={title}
 >
    <div
       class="w-full p-4 text-center bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700"
    >
-      <h5 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">
+      <h3 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">
          About Me
-      </h5>
-      <p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">
+      </h3>
+      <p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-200">
          Hello there! My name is Raghuram Sadineni, and I am a Masters student
          in Computer Science at Louisiana State University. I also work as a
          Graduate Student Assistant in the Department of Physics and Astronomy,
          where I get to apply my passion for computer science and programming to
          real-world research projects.
-      </p><p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">
+      </p><p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-200">
          With over 3+ years of experience as a Software Developer, I have worked
          on multiple enterprise applications, and I'm always looking for new
          opportunities to grow and expand my skill set. I'm confident in my
          ability to leverage my knowledge and expertise to help businesses
          develop applications that align with their vision and goals.
-      </p><p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">
+      </p><p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-200">
          If you're interested in learning more about my experience and how I can
          help your business, feel free to connect with me. I'm always excited to
          explore new possibilities and collaborate with like-minded individuals.
@@ -40,14 +40,15 @@ const { title } = Astro.props as Props;
          <div
             class="w-full sm:w-auto bg-gray-800 text-white rounded-lg flex flex-col items-center justify-center px-4 py-2.5 dark:bg-gray-700"
          >
-            <h6 class="mb-4 text-xl font-bold text-white self-start">
+            <h4 class="mb-4 text-xl font-bold text-white self-start">
                Connect on:
-            </h6>
+            </h4>
             <div class="flex justify-around w-full flex-wrap">
                <a
                   class="flex justify-center w-12 p-1 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:hover:bg-gray-600 dark:focus:ring-gray-700 rounded-lg"
-                  href="https://github.com/RAGHURAM-SADINENI"
+                  href="https://github.com/raghuramsadineni"
                   role="button"
+                  aria-label="Github"
                >
                   <svg
                      xmlns="http://www.w3.org/2000/svg"
@@ -65,6 +66,7 @@ const { title } = Astro.props as Props;
                   class="flex justify-center w-12 p-1 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:hover:bg-gray-600 dark:focus:ring-gray-700 rounded-lg"
                   href="https://www.linkedin.com/in/raghuram-sadineni/"
                   role="button"
+                  aria-label="LinkedIn"
                >
                   <svg
                      xmlns="http://www.w3.org/2000/svg"
@@ -80,34 +82,10 @@ const { title } = Astro.props as Props;
                </a>
                <a
                   class="flex justify-center w-12 p-1 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:hover:bg-gray-600 dark:focus:ring-gray-700 rounded-lg"
-                  href="https://medium.com/@sadineni.raghuram"
-                  role="button"
-               >
-                  <svg
-                     viewBox="0 0 1043.63 592.71"
-                     xmlns="http://www.w3.org/2000/svg"
-                     class="w-8 h-8"
-                  >
-                     <g data-name="Layer 2"
-                        ><g data-name="Layer 1">
-                           <path
-                              fill="#fff"
-                              d="M588.67 296.36c0 163.67-131.78 296.35-294.33 296.35S0 460 0
-                    296.36 131.78 0 294.34 0s294.33 132.69 294.33 296.36M911.56 296.36c0
-                    154.06-65.89 279-147.17 279s-147.17-124.94-147.17-279 65.88-279
-                    147.16-279 147.17 124.9 147.17 279M1043.63 296.36c0 138-23.17 249.94-51.76
-                    249.94s-51.75-111.91-51.75-249.94 23.17-249.94 51.75-249.94 51.76 111.9
-                    51.76 249.94"
-                           ></path>
-                        </g></g
-                     >
-                  </svg>
-               </a>
-               <a
-                  class="flex justify-center w-12 p-1 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:hover:bg-gray-600 dark:focus:ring-gray-700 rounded-lg"
                   href="mailto:sadineni.raghuram@gmail.com"
                   role="button"
                   target="_blank"
+                  aria-label="Mail"
                >
                   <svg
                      xmlns="http://www.w3.org/2000/svg"
@@ -137,6 +115,7 @@ const { title } = Astro.props as Props;
                   href="tel:+12254490598"
                   role="button"
                   target="_blank"
+                  aria-label="Phone"
                >
                   <svg
                      xmlns="http://www.w3.org/2000/svg"
@@ -157,6 +136,7 @@ const { title } = Astro.props as Props;
                   class="flex justify-center w-12 p-1 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:hover:bg-gray-600 dark:focus:ring-gray-700 rounded-lg"
                   href="https://wa.me/+12254490598"
                   role="button"
+                  aria-label="WhatsApp"
                >
                   <svg
                      xmlns="http://www.w3.org/2000/svg"
@@ -174,6 +154,7 @@ const { title } = Astro.props as Props;
                   class="flex justify-center w-12 p-1 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:hover:bg-gray-600 dark:focus:ring-gray-700 rounded-lg"
                   href="https://www.instagram.com/raghuram_sadineni/"
                   role="button"
+                  aria-label="Instagram"
                >
                   <svg
                      xmlns="http://www.w3.org/2000/svg"
@@ -191,6 +172,7 @@ const { title } = Astro.props as Props;
                   class="flex justify-center w-12 p-1 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:hover:bg-gray-600 dark:focus:ring-gray-700 rounded-lg"
                   href="https://twitter.com/bolt9199"
                   role="button"
+                  aria-label="Twitter"
                >
                   <svg
                      xmlns="http://www.w3.org/2000/svg"
@@ -208,6 +190,7 @@ const { title } = Astro.props as Props;
                   class="flex justify-center w-12 p-1 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:hover:bg-gray-600 dark:focus:ring-gray-700 rounded-lg"
                   href="https://www.facebook.com/raghuram.sadineni"
                   role="button"
+                  aria-label="Facebook"
                >
                   <svg
                      xmlns="http://www.w3.org/2000/svg"

@@ -8,32 +8,32 @@ const { title } = Astro.props as Props;
 ---
 
 <section
-   class="sm:ml-64 py-8 px-4 max-w-screen-xl lg:py-16 lg:px-12 m-4"
+   class="sm:ml-64 py-8 px-4  lg:py-16 lg:px-12 m-4"
    id={title}
 >
-   <h5 class="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
+   <h3 class="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
       Projects
-   </h5>
+   </h3>
    <div class="flex flex-wrap">
       <div
          class="card m-4 max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       >
-         <a href="https://www.bahmni.org/">
+         <a href="https://www.bahmni.org/" aria-label="bahmni" target="_blank">
             <img
                class="rounded-t-lg w-full h-80 object-contain"
-               src="/bahmni.png"
+               src="/bahmni.avif"
                alt=""
             />
          </a>
          <div class="p-5">
-            <a href="https://www.bahmni.org/">
-               <h5
+            <a href="https://www.bahmni.org/" aria-label="bahmni" target="_blank">
+               <h4
                   class="mb-2 text-2xl font-bold tracking-tight text-rose-900 dark:text-white"
                >
                   Distributed Health Care Management System
-               </h5>
+               </h4>
             </a>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-200">
                Successfully deployed the Bhamni open-source healthcare
                management system in a public hospital, optimizing operations
                through implementation of face recognition technology for
@@ -45,22 +45,22 @@ const { title } = Astro.props as Props;
       <div
          class="card m-4 max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       >
-         <a href="https://raghuram-sadineni.github.io/ShiftReduceParser/">
+         <a href="https://raghuram-sadineni.github.io/ShiftReduceParser/"  aria-label="shiftreduceparser" target="_blank">
             <img
                class="rounded-t-lg w-full h-80 object-contain"
-               src="/shiftreduceparser.png"
+               src="/shiftreduceparser.avif"
                alt=""
             />
          </a>
          <div class="p-5">
-            <a href="https://raghuram-sadineni.github.io/ShiftReduceParser/">
-               <h5
+            <a href="https://raghuram-sadineni.github.io/ShiftReduceParser/"  aria-label="shiftreduceparser" target="_blank">
+               <h4
                   class="mb-2 text-2xl font-bold tracking-tight text-rose-900 dark:text-white"
                >
                   Shift Reduce Parser
-               </h5>
+               </h4>
             </a>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-200">
                I developed a web app that implements a shift-reduce parser using
                TypeScript. It can parse a string based on a pre-defined
                context-free grammar and displays the final goal state. The app
@@ -73,7 +73,7 @@ const { title } = Astro.props as Props;
       <div
          class="card m-4 max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       >
-         <a href="https://github.com/RAGHURAM-SADINENI/Text-Book-Recommendor">
+         <a href="https://github.com/raghuramsadineni/Text-Book-Recommendor"  aria-label="textbookrecommender" target="_blank">
             <img
                class="rounded-t-lg w-full h-80 object-contain"
                src="/textbook.avif"
@@ -82,15 +82,16 @@ const { title } = Astro.props as Props;
          </a>
          <div class="p-5">
             <a
-               href="https://github.com/RAGHURAM-SADINENI/Text-Book-Recommendor"
+               href="https://github.com/raghuramsadineni/Text-Book-Recommendor"
+               aria-label="textbookrecommender" target="_blank"
             >
-               <h5
+               <h4
                   class="mb-2 text-2xl font-bold tracking-tight text-rose-900 dark:text-white"
                >
                   Text-Book-Recommendor
-               </h5>
+               </h4>
             </a>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-200">
                Implemented an expert system to identify textbook names for a
                given topic by using automated software to search the internet
                and gather relevant information, which is then presented in a
@@ -102,7 +103,7 @@ const { title } = Astro.props as Props;
       <div
          class="card m-4 max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       >
-         <a href="https://github.com/RAGHURAM-SADINENI/Text-Book-Recommendor">
+         <a href="https://github.com/raghuramsadineni/Breast-Cancer-Wisconsin"  aria-label="classificationalgorithms" target="_blank">
             <img
                class="rounded-t-lg w-full h-80 object-contain"
                src="/classificationalgorithms.avif"
@@ -111,15 +112,16 @@ const { title } = Astro.props as Props;
          </a>
          <div class="p-5">
             <a
-               href="https://github.com/RAGHURAM-SADINENI/Text-Book-Recommendor"
+               href="https://github.com/raghuramsadineni/Breast-Cancer-Wisconsin"
+               aria-label="classificationalgorithms" target="_blank"
             >
-               <h5
+               <h4
                   class="mb-2 text-2xl font-bold tracking-tight text-rose-900 dark:text-white"
                >
                   Classification Algorithms
-               </h5>
+               </h4>
             </a>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-200">
                Implemented various machine learning algorithms including KNN,
                Decision Tree, Random Forests, SVM, and ANN on Iris and
                Breast-Cancer-Wisconsin datasets, demonstrating proficiency in
