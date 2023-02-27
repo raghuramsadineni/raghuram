@@ -15,6 +15,10 @@ import robotsTxt from "astro-robots-txt";
 // https://astro.build/config
 export default defineConfig({
   output: 'server',
-  integrations: [tailwind(), image(), robotsTxt()],
+  integrations: [tailwind(), image(), robotsTxt({
+    policy:[
+      {userAgent: '*', disallow: ''}
+    ]
+  })],
   adapter: vercel()
 });
