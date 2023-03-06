@@ -28,6 +28,9 @@ window.addEventListener('load', () => {
       if (!offline)
         pwaToast.classList.add('refresh')
       pwaToast.classList.add('show')
+      setTimeout(() => {
+        hidePwaToast(true)
+      }, 1000);
     })
   }
 
