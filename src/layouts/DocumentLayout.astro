@@ -23,9 +23,6 @@ const { title = "Raghuram Sadineni" } = Astro.props as Props;
 		<meta name="generator" content={Astro.generator} />
 		<meta name="theme-color" content="#9F1239"/>
 
-		<meta http-equiv="Content-Security-Policy" content="script-src 'none'">
-		<meta http-equiv="Content-Security-Policy" content="object-src 'none'">
-
 		<title>{title.length !== 0 ? title : "Raghuram Sadineni"}</title>
 		<script is:inline>
 			if (
