@@ -20,7 +20,7 @@ export const manifest: Partial<ManifestOptions> = {
 	name: "Raghuram Sadineni",
 	short_name: "Raghuram Sadineni",
 	description: "Raghuram Sadineni: Personal Portfolio website",
-	theme_color: "##9F1239", 
+	theme_color: "#9F1239", 
 	background_color: "#ffffff",
 	display: "minimal-ui",
 	icons: [
