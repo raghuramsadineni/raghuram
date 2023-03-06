@@ -48,7 +48,7 @@ window.addEventListener('load', () => {
     },
     onRegisteredSW(swScriptUrl) {
 
-      console.log('SW registered: ', swScriptUrl)
+      // console.log('SW registered: ', swScriptUrl)
     },
   })
 })
